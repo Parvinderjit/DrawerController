@@ -47,12 +47,16 @@ extension DrawerController {
     case left = "left"
     case right = "right"
   }
+    
+    public var isConnectedWithSegue: Bool {
+        return false
+    }
   
   open override func awakeFromNib() {
     guard storyboard != nil else {
       return
     }
-    
+      if !isConnectedWithSegue { return }
     // Required segue "center". Uncaught exception if undefined in storyboard.
     performSegue(withIdentifier: Keys.center.rawValue, sender: self)
     
