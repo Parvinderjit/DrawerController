@@ -13,12 +13,12 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
 
   s.subspec 'Core' do |ss|
-    ss.source_files = 'DrawerController/DrawerController.swift', 'DrawerController/DrawerSegue.swift'
+    ss.source_files = 'Sources/DrawerController/DrawerController.swift', 'Sources/DrawerController/DrawerSegue.swift'
     ss.framework  = 'QuartzCore'
   end
 
   s.subspec 'DrawerVisualStates' do |ss|
-  	ss.source_files = 'DrawerController/DrawerBarButtonItem.swift', 'DrawerController/AnimatedMenuButton.swift', 'DrawerController/DrawerVisualState.swift'
+  	ss.source_files = 'Sources/DrawerController/DrawerBarButtonItem.swift', 'Sources/DrawerController/AnimatedMenuButton.swift', 'Sources/DrawerController/DrawerVisualState.swift'
   	ss.dependency 'DrawerController/Core'
   end
 end
